@@ -282,6 +282,21 @@ footer p { font-size: 0.85rem; color: #555; }
 footer p a { color: #16a34a; text-decoration: none; }
 footer p a:hover { text-decoration: underline; }
 
+footer .powered-by {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 1rem;
+  }
+  
+  footer .powered-by a {
+    color: #16a34a;
+    text-decoration: none;
+  }
+  
+  footer .powered-by a:hover {
+    text-decoration: underline;
+  }
 /* =========================
    ICON (generic inline SVG helper)
    ========================= */
