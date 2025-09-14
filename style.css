@@ -61,11 +61,32 @@ button { font-family: inherit; cursor: pointer; }
    ========================= */
 /* Use either .with-bg or .home-hero on the section—both are supported */
 .with-bg,
+/* HERO SECTION */
 .home-hero {
-  background-image: url('assets/images/golf-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
+    position: relative;
+    background-image: url('assets/images/golf-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #1b1b1b; /* keep your dark text */
+    z-index: 0;
+  }
+  
+  /* white overlay */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6); /* adjust opacity: 0.4 lighter, 0.7 stronger */
+    z-index: 1;
+  }
+  
+  /* keep content above overlay */
+  .home-hero .hero-content,
+  .home-hero .service-row {
+    position: relative;
+    z-index: 2;
+  }
+  
 
 .hero {
   text-align: center;
@@ -265,4 +286,5 @@ footer p a:hover { text-decoration: underline; }
    ICON (generic inline SVG helper)
    ========================= */
 .icon { width: 32px; height: 32px; margin-bottom: 0.75rem; color: #16a34a; }
+
 
