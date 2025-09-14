@@ -1,0 +1,596 @@
+/* style.css */
+
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fdfb;
+  color: #222;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  #portfolio, #services {
+    scroll-margin-top: 80px; /* adjust based on navbar height */
+  }
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  
+    background: rgba(255, 255, 255, 0.75); /* semi-transparent white */
+    backdrop-filter: blur(10px);           /* blur behind the navbar */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+  
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;         /* bigger to match footer brand */
+    color: #16a34a;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .navbar .logo:hover {
+    color: #15803d;            /* darker green on hover */
+  }
+
+  .navbar nav a {
+    margin: 0 1rem;
+    font-weight: 500;
+    color: #1b1b1b;
+  }
+  
+  .navbar nav a:hover {
+    color: #16a34a;
+  }
+  
+  .navbar .btn-quote {
+    background: #16a34a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navbar .btn-quote:hover {
+    background: #15803d;       /* darker green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #1b1b1b;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero .highlight {
+  color: #16a34a;
+}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+.hero .buttons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+}
+.btn-primary {
+  background: #16a34a;
+  color: white;
+}
+.btn-secondary {
+  background: white;
+  color: #16a34a;
+  border: 1px solid #16a34a;
+}
+
+.home-hero {
+    background-image: url('assets/images/golf-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .btn-primary, .btn-secondary {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background: #149845; /* slightly darker green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .btn-secondary:hover {
+    background: #16a34a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+/* SERVICES */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 4rem 2rem;
+}
+.service-card {
+  background: #e8f5e9;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.service-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  background: #f1f8f4;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.project-card {
+  background: white;
+  border-radius: 8px;
+  width: 280px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+.project-card span {
+  background: #a5d6a7;
+  color: #1b5e20;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.project-card h4 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* === PROFESSIONAL SERVICES (cards) === */
+.pricing {
+    background: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .pricing h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: .5rem;
+    color: #1b1b1b;
+  }
+  .pricing > p {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    color: #475569;
+    line-height: 1.7;
+  }
+  
+  .pricing .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  /* card */
+  .price-card {
+    background: #f1f8f4;              /* keep your pale green */
+    border-radius: 14px;
+    border: 1px solid #e6efe8;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    width: 360px;
+    text-align: left;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .price-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.08);
+  }
+  
+  /* icon tile */
+  .price-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #dff1e6;              /* light green tile */
+    color: #2e7d32;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .price-icon svg { width: 22px; height: 22px; }
+  
+  /* headings + blurb */
+  .price-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #183a2b;                    /* dark green/gray tone */
+    margin-bottom: .6rem;
+  }
+  .price-card .desc {
+    color: #334155;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  
+  /* includes label + list with green bullets */
+  .price-card .includes-label {
+    font-weight: 700;
+    margin: .75rem 0 .5rem;
+    color: #0f172a;
+  }
+  .price-card ul {
+    list-style: none;
+    margin: 0 0 1.25rem 0;
+    padding-left: 0;
+  }
+  .price-card ul li {
+    position: relative;
+    padding-left: 1.125rem;
+    margin: .45rem 0;
+    color: #394b59;
+  }
+  .price-card ul li::before {
+    content: "";
+    width: 7px; height: 7px;
+    border-radius: 999px;
+    background: #16a34a;              /* your green */
+    position: absolute;
+    left: 0; top: .55rem;
+  }
+  
+  /* price + button */
+  .price {
+    font-size: 1.3rem;
+    font-weight: 640;
+    color: #16a34a;
+    margin: .25rem 0 .9rem;
+  }
+  .price-card .btn-primary {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: #16a34a;
+    color: #fff;
+    border-radius: 12px;
+    padding: .9rem 1rem;
+    font-weight: 500;
+    border: none;
+  }
+  .price-card .btn-primary:hover { filter: brightness(.95); }
+  
+  
+
+/* FOOTER */
+footer {
+  background: #e0f2f1;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.9rem;
+}
+.footer-brand {
+  font-weight: bold;
+  color: #16a34a;
+  margin-bottom: 1rem;
+}
+footer .footer-links {
+  display: flex;
+  gap: 2rem;
+}
+footer .footer-links div {
+  min-width: 120px;
+}
+footer .footer-links h4 {
+  margin-bottom: 0.5rem;
+}
+footer input[type="email"] {
+  padding: 0.5rem;
+  width: 200px;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+footer button {
+  background: #16a34a;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+/* === icon settings === */
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.75rem;
+    color: #16a34a;
+  }
+
+  /* === HERO SERVICE ROW === */
+.service-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+  
+  .service-card {
+    background: #e6f4ea; /* light green */
+    padding: 2rem;
+    border-radius: 12px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* === ICON CONTAINER === */
+  .service-card .icon {
+    width: 36px;
+    height: 36px;
+    padding: 0.5rem;
+    background-color: #ccebd5; /* pale green box */
+    border-radius: 10px;
+    margin: 0 auto 0.75rem;
+    display: inline-block;
+    color: #16a34a;
+  }
+  
+  /* === LABEL + TEXT === */
+  .service-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #16a34a;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+  
+  .service-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1b1b1b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  /* === FEATURED WORK SECTION === */
+.portfolio {
+    background: #f1f8f4; /* light green background */
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .portfolio h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1b1b1b;
+  }
+  
+  .portfolio p {
+    font-size: 1.05rem;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+  }
+  
+  /* === PROJECT GRID === */
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  /* === PROJECT CARD === */
+  .project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: transform 0.2s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* === CATEGORY BADGE === */
+  .project-card span {
+    display: inline-block;
+    background: #16a34a; /* soft green */
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* === CARD TITLES === */
+  .project-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-card p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  /* === footer brand === */
+  footer {
+    background: #f1f8f4;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .footer-brand {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #16a34a;
+    text-decoration: none;
+    margin-bottom: 2rem;
+  }
+  .footer-brand:hover {
+    color: #15803d;
+  }
+  
+  /* links section layout */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-col {
+    min-width: 180px;
+    text-align: left;
+  }
+  
+  .footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #1b1b1b;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-col ul li a {
+    color: #444;
+    text-decoration: none;
+  }
+  .footer-col ul li a:hover {
+    color: #16a34a;
+  }
+  
+  /* email form */
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-form input {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  .footer-form button {
+    background: #16a34a;
+    color: #fff;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .footer-form button:hover {
+    background: #15803d;
+  }
+  
+  /* bottom text */
+  footer p {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  footer p a {
+    color: #16a34a;
+    text-decoration: none;
+  }
+  footer p a:hover {
+    text-decoration: underline;
+  }
+  
