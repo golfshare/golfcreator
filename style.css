@@ -243,6 +243,76 @@ button { font-family: inherit; cursor: pointer; }
 }
 .price-card .btn-primary:hover { filter: brightness(.95); }
 
+/* === CTA SECTION === */
+.cta {
+  background: #16a34a; /* your green */
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.cta h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons .btn-primary,
+.cta-buttons .btn-secondary {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta-buttons .btn-primary {
+  background: white;
+  color: #16a34a;
+}
+
+.cta-buttons .btn-primary:hover {
+  background: #f1f8f4;
+  transform: translateY(-2px);
+}
+
+.cta-buttons .btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.cta-highlights {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  opacity: 0.9;
+}
+
 /* =========================
    FOOTER (modern columns)
    ========================= */
