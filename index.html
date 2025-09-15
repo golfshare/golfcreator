@@ -1,338 +1,375 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ModernPar</title>
-<link rel="stylesheet" href="./style.css?v=1">
-</head>
-<body>
-    
-<!-- Navbar -->
-<header class="navbar">
-    <a href="#" class="logo">ModernPar</a>
-    <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#quote" class="btn-quote">Get Quote</a>
-  </header>
+/* =========================
+   style.css (GolfCreator)
+   ========================= */
 
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fdfb;
+  color: #222;
+  line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; }
 
-<!-- Hero Section -->
-<section class="hero with-bg home-hero">
-<div class="hero-content">
-<h1>Capturing the <span class="highlight">Essence</span> of Golf</h1>
-<p>Professional golf content creation and video production services. From UGC campaigns to tournament coverage, I bring your golf story to life with cinematic quality and authentic storytelling.</p>
-<div class="buttons">
-<a href="#portfolio" class="btn-primary">View My Work</a>
-<a href="#" class="btn-secondary">▶ Watch Reel</a>
-</div>
-</div>
+/* Anchor offset for sticky navbar */
+#portfolio, #services { scroll-margin-top: 80px; }
 
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
 
-<!-- Service Overview Embedded in Hero -->
-<div class="service-row">
-<div class="service-card">
-<!-- Video Camera Icon -->
-<svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h11a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z"/></svg>
-<div class="service-label">Video</div>
-<h3>Video Production</h3>
-<p>Professional tournament coverage, course showcases, and promotional videos</p>
-</div>
-<div class="service-card">
-<!-- Camera Icon -->
-<svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h2l2-3h10l2 3h2a1 1 0 011 1v11a2 2 0 01-2 2H4a2 2 0 01-2-2V8a1 1 0 011-1z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11a3 3 0 100 6 3 3 0 000-6z"/></svg>
-<div class="service-label">UGC</div>
-<h3>UGC Content</h3>
-<p>Authentic user-generated content for brands and golf organizations</p>
-</div>
-<div class="service-card">
-<!-- Pencil Icon -->
-<svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M9 13l6.536-6.536a2 2 0 112.828 2.828L11.828 16H9v-2.828z"/></svg>
-<div class="service-label">Strategy</div>
-<h3>Content Strategy</h3>
-<p>Complete content planning and social media strategy for golf brands</p>
-</div>
-</div>
-</section>
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  position: sticky; top: 0; z-index: 1000;
+}
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio">
-    <h2>Featured Work</h2>
-    <p>A showcase of professional golf content creation across tournaments, courses, and brand campaigns</p>
-    <div class="project-grid">
+.navbar .logo {
+  font-weight: bold; font-size: 1.5rem;
+  color: #16a34a; text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.navbar .logo:hover { color: #15803d; }
+
+.navbar nav a {
+  margin: 0 1rem; font-weight: 500; color: #1b1b1b;
+}
+.navbar nav a:hover { color: #16a34a; }
+
+.navbar .btn-quote {
+  background: #16a34a; color: white;
+  padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+.navbar .btn-quote:hover {
+  background: #15803d; transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.navbar .btn-quote:active { transform: translateY(0); box-shadow: none; }
+
+/* =========================
+   HERO
+   ========================= */
+/* Use either .with-bg or .home-hero on the section—both are supported */
+.with-bg,
+/* HERO SECTION */
+.home-hero {
+    position: relative;
+    background-image: url('assets/images/golf-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #1b1b1b; /* keep your dark text */
+    z-index: 0;
+  }
   
-      <div class="project-card">
-        <span>Tournament Coverage</span>
-        <h4>PGA Tournament Highlights</h4>
-        <p>Professional tournament coverage with cinematic storytelling</p>
-      </div>
+  /* white overlay */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6); /* adjust opacity: 0.4 lighter, 0.7 stronger */
+    z-index: 1;
+  }
   
-      <div class="project-card">
-        <span>Course Marketing</span>
-        <h4>Course Showcase – Pebble Beach</h4>
-        <p>Aerial and ground footage showcasing the iconic coastal course</p>
-      </div>
-  
-      <div class="project-card">
-        <span>UGC Campaign</span>
-        <h4>Brand UGC Campaign</h4>
-        <p>Authentic content creation for major golf equipment brand</p>
-      </div>
-  
-      <div class="project-card">
-        <span>Educational Content</span>
-        <h4>Golf Instruction Series</h4>
-        <p>Educational content with professional golf instructors</p>
-      </div>
-  
-      <div class="project-card">
-        <span>Documentary</span>
-        <h4>Club Championship Documentary</h4>
-        <p>Behind-the-scenes storytelling of local championship</p>
-      </div>
-  
-      <!-- New Card -->
-      <div class="project-card">
-        <span>Product Content</span>
-        <h4>Equipment Review Content</h4>
-        <p>Product-focused content for golf gear reviews</p>
-      </div>
-  
-    </div>
-  </section>
+  /* keep content above overlay */
+  .home-hero .hero-content,
+  .home-hero .service-row {
+    position: relative;
+    z-index: 2;
+  }
   
 
-  <!-- Services Section -->
-<section id="services" class="pricing">
-    <h2>Professional Services</h2>
-    <p>Comprehensive golf content creation services tailored to your specific needs and budget</p>
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 6rem;
+  color: #1b1b1b;
+}
+.hero h1 { font-size: 3.75rem; margin-bottom: 1rem; }
+.hero .highlight { color: #16a34a; }
+.hero p { font-size: 1.125rem; max-width: 700px; margin: 0 auto 2rem; color: #333; }
+
+.hero .buttons a {
+  display: inline-block; margin: 0 .5rem;
+  padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600;
+}
+.btn-primary { background: #16a34a; color: white; border: none; }
+.btn-secondary { background: white; color: #16a34a; border: 1px solid #16a34a; }
+.btn-primary, .btn-secondary { transition: all 0.2s ease-in-out; cursor: pointer; }
+.btn-primary:hover {
+  background: #15803d; transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.btn-secondary:hover {
+  background: #16a34a; color: #fff; transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.btn-primary:active, .btn-secondary:active { transform: translateY(0); box-shadow: none; }
+
+/* Hero service row/cards */
+.service-row {
+  display: flex; justify-content: center; align-items: stretch;
+  gap: 2rem; flex-wrap: wrap; margin-top: 3rem;
+}
+.service-card {
+  background: #e6f4ea;
+  padding: 2rem; border-radius: 12px; width: 260px; text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+.service-card:hover { transform: translateY(-4px); }
+.service-card .icon {
+  width: 36px; height: 36px; padding: 8px;
+  background: #ccebd5; border-radius: 10px;
+  margin: 0 auto .75rem; display: inline-block; color: #16a34a;
+}
+.service-label {
+  font-size: .8rem; font-weight: 700; color: #16a34a;
+  margin-bottom: .25rem; text-transform: uppercase;
+}
+.service-card h3 { font-size: 1.15rem; font-weight: 700; color:#1b1b1b; margin-bottom: .5rem; }
+.service-card p  { font-size: .95rem; color:#444; }
+
+/* (Optional legacy .services section if still used elsewhere) */
+.services {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+  padding: 4rem 2rem;
+}
+.services .service-card { background: #e8f5e9; border-radius: 8px; padding: 2rem; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.05); text-align: center; }
+.services .service-card h3 { margin-top: 1rem; font-size: 1.2rem; }
+
+/* =========================
+   FEATURED WORK (Portfolio)
+   ========================= */
+.portfolio {
+  background: #f1f8f4; padding: 4rem 2rem; text-align: center;
+}
+.portfolio h2 {
+  font-size: 2rem; font-weight: 700; margin-bottom: .5rem; color: #1b1b1b;
+}
+.portfolio p {
+  font-size: 1.05rem; color: #333; max-width: 700px; margin: 0 auto 2.5rem;
+}
+.project-grid {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;
+}
+.project-card {
+  background: #fff; border-radius: 12px; padding: 1.5rem; width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: left; transition: transform 0.2s;
+}
+.project-card:hover { transform: translateY(-4px); }
+.project-card span {
+  display: inline-block; background: #16a34a; color: #fff;
+  font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.6rem;
+  border-radius: 6px; margin-bottom: 0.75rem;
+}
+.project-card h4 { font-size: 1.05rem; font-weight: 700; color: #222; margin-bottom: 0.5rem; }
+.project-card p  { font-size: 0.95rem; color: #444; }
+
+/* =========================
+   PROFESSIONAL SERVICES (Pricing)
+   ========================= */
+.pricing {
+  background: #fff; padding: 4rem 2rem; text-align: center;
+}
+.pricing h2 {
+  font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em;
+  margin-bottom: .5rem; color: #1b1b1b;
+}
+.pricing > p {
+  max-width: 760px; margin: 0 auto 2.5rem;
+  color: #475569; line-height: 1.7;
+}
+.pricing .project-grid {
+  display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;
+}
+.price-card {
+  background: #f1f8f4; border-radius: 14px; border: 1px solid #e6efe8;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  width: 360px; text-align: left; padding: 2rem;
+  display: flex; flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.price-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,.08); }
+
+/* Icon tile */
+.price-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: #dff1e6; color: #2e7d32;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem;
+}
+.price-icon svg { width: 22px; height: 22px; }
+
+/* Headings + blurb */
+.price-card h3 {
+  font-size: 1.25rem; font-weight: 700; color: #183a2b; margin-bottom: .6rem;
+}
+.price-card .desc {
+  color: #334155; margin-bottom: 1rem; line-height: 1.7;
+}
+
+/* Includes label + list */
+.price-card .includes-label {
+  font-weight: 700; margin: .75rem 0 .5rem; color: #0f172a;
+}
+.price-card ul { list-style: none; margin: 0 0 1.25rem 0; padding-left: 0; }
+.price-card ul li {
+  position: relative; padding-left: 1.125rem; margin: .45rem 0; color: #394b59;
+}
+.price-card ul li::before {
+  content: ""; width: 7px; height: 7px; border-radius: 999px;
+  background: #16a34a; position: absolute; left: 0; top: .55rem;
+}
+
+/* Price + CTA */
+.price {
+  font-size: 1.3rem; font-weight: 700; color: #16a34a;
+  margin: .25rem 0 .9rem;
+}
+.price-card .btn-primary {
+  display: inline-block; width: 100%; text-align: center;
+  background: #16a34a; color: #fff; border-radius: 12px;
+  padding: .9rem 1rem; font-weight: 700; border: none;
+}
+.price-card .btn-primary:hover { filter: brightness(.95); }
+
+/* === CTA SECTION === */
+.cta {
+  background: #16a34a; /* your green */
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.cta h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons .btn-primary,
+.cta-buttons .btn-secondary {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta-buttons .btn-primary {
+  background: white;
+  color: #16a34a;
+}
+
+.cta-buttons .btn-primary:hover {
+  background: #f1f8f4;
+  transform: translateY(-2px);
+}
+
+.cta-buttons .btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.cta-highlights {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  opacity: 0.9;
+}
+
+/* =========================
+   FOOTER (modern columns)
+   ========================= */
+footer {
+  background: #f1f8f4; padding: 3rem 2rem; text-align: center; color: #333;
+}
+.footer-brand {
+  display: inline-block; font-weight: bold; font-size: 1.5rem;
+  color: #16a34a; text-decoration: none; margin-bottom: 2rem;
+  transition: color 0.2s ease-in-out;
+}
+.footer-brand:hover { color: #15803d; }
+
+.footer-links {
+  display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; margin-bottom: 2rem;
+}
+.footer-col { min-width: 180px; text-align: left; }
+.footer-col h4 { font-size: 1.1rem; margin-bottom: 1rem; font-weight: 700; color: #1b1b1b; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col ul li { margin-bottom: 0.5rem; }
+.footer-col ul li a { color: #444; text-decoration: none; }
+.footer-col ul li a:hover { color: #16a34a; }
+
+/* email form */
+.footer-form { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-form input {
+  padding: 0.6rem; border-radius: 6px; border: 1px solid #ccc;
+}
+.footer-form button {
+  background: #16a34a; color: #fff; padding: 0.6rem;
+  border: none; border-radius: 6px; cursor: pointer; font-weight: 600;
+}
+.footer-form button:hover { background: #15803d; }
+
+/* bottom text */
+footer p { font-size: 0.85rem; color: #555; }
+footer p a { color: #16a34a; text-decoration: none; }
+footer p a:hover { text-decoration: underline; }
+
+footer .powered-by {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 1rem;
+  }
   
-    <div class="project-grid">
-      <!-- Card 1 -->
-      <div class="price-card">
-        <div class="price-icon">
-          <!-- video camera -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h11a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z"/>
-          </svg>
-        </div>
+  footer .powered-by a {
+    color: #16a34a;
+    text-decoration: none;
+  }
   
-        <h3>Tournament Coverage</h3>
-        <p class="desc">
-          Professional multi-camera coverage of golf tournaments with live streaming
-          capabilities and post-event highlight reels.
-        </p>
-  
-        <div class="includes-label">Includes:</div>
-        <ul>
-          <li>Multi-camera setup</li>
-          <li>Live streaming</li>
-          <li>Highlight packages</li>
-          <li>Drone footage</li>
-        </ul>
-  
-        <div class="price">Starting at $2,500</div>
-        <a href="#" class="btn-primary">Get Quote</a>
-      </div>
-  
-      <!-- Card 2 -->
-      <div class="price-card">
-        <div class="price-icon">
-          <!-- camera -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 7h2l2-3h10l2 3h2a1 1 0 011 1v11a2 2 0 01-2 2H4a2 2 0 01-2-2V8a1 1 0 011-1z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 11a3 3 0 100 6 3 3 0 000-6z"/>
-          </svg>
-        </div>
-  
-        <h3>Course Marketing</h3>
-        <p class="desc">
-          Stunning visual content to showcase golf courses, including aerial photography,
-          walkthrough videos, and promotional materials.
-        </p>
-  
-        <div class="includes-label">Includes:</div>
-        <ul>
-          <li>Aerial photography</li>
-          <li>Course walkthroughs</li>
-          <li>Promotional videos</li>
-          <li>Social media content</li>
-        </ul>
-  
-        <div class="price">Starting at $1,800</div>
-        <a href="#" class="btn-primary">Get Quote</a>
-      </div>
-  
-      <!-- Card 3 -->
-      <div class="price-card">
-        <div class="price-icon">
-          <!-- pencil -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15.232 5.232l3.536 3.536M9 13l6.536-6.536a2 2 0 112.828 2.828L11.828 16H9v-2.828z"/>
-          </svg>
-        </div>
-  
-        <h3>UGC Campaigns</h3>
-        <p class="desc">
-          Authentic user-generated content creation for golf brands, equipment companies,
-          and course marketing initiatives.
-        </p>
-  
-        <div class="includes-label">Includes:</div>
-        <ul>
-          <li>Brand storytelling</li>
-          <li>Product demonstrations</li>
-          <li>Authentic testimonials</li>
-          <li>Social media strategy</li>
-        </ul>
-  
-        <div class="price">Starting at $1,200</div>
-        <a href="#" class="btn-primary">Get Quote</a>
-      </div>
-  
-      <!-- Card 4 -->
-      <div class="price-card">
-        <div class="price-icon">
-          <!-- academic cap / instruction -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 14l9-5-9-5-9 5 9 5z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 14l6.16-3.422A12.083 12.083 0 0112 20.5A12.083 12.083 0 015.84 10.578L12 14z"/>
-          </svg>
-        </div>
-  
-        <h3>Golf Instruction</h3>
-        <p class="desc">
-          Educational content creation with golf professionals—lessons, technique
-          analysis, and structured training series.
-        </p>
-  
-        <div class="includes-label">Includes:</div>
-        <ul>
-          <li>Lesson documentation</li>
-          <li>Technique analysis</li>
-          <li>Training series</li>
-          <li>Educational content</li>
-        </ul>
-  
-        <div class="price">Starting at $800</div>
-        <a href="#" class="btn-primary">Get Quote</a>
-      </div>
-  
-      <!-- Card 5 -->
-      <div class="price-card">
-        <div class="price-icon">
-          <!-- calendar -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3M4 11h16M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-          </svg>
-        </div>
-  
-        <h3>Event Documentation</h3>
-        <p class="desc">
-          Complete event coverage including corporate golf days, charity tournaments,
-          and private club events.
-        </p>
-  
-        <div class="includes-label">Includes:</div>
-        <ul>
-          <li>Event highlights</li>
-          <li>Award ceremonies</li>
-          <li>Participant interviews</li>
-          <li>Social sharing</li>
-        </ul>
-  
-        <div class="price">Starting at $1,500</div>
-        <a href="#" class="btn-primary">Get Quote</a>
-      </div>
-  
-      <!-- Card 6 -->
-      <div class="price-card">
-        <div class="price-icon">
-          <!-- chart bar -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 19V9m6 10V5m-9 14h12M3 19h2"/>
-          </svg>
-        </div>
-  
-        <h3>Content Strategy</h3>
-        <p class="desc">
-          Comprehensive content planning and social strategy development for
-          golf-related businesses and organizations.
-        </p>
-  
-        <div class="includes-label">Includes:</div>
-        <ul>
-          <li>Content calendar</li>
-          <li>Platform strategy</li>
-          <li>Engagement optimization</li>
-          <li>Analytics reporting</li>
-        </ul>
-  
-        <div class="price">Starting at $600</div>
-        <a href="#" class="btn-primary">Get Quote</a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer>
-    <a href="#" class="footer-brand">ModernPar</a>
-  
-    <div class="footer-links">
-      <div class="footer-col">
-        <h4>Community</h4>
-        <ul>
-          <li><a href="#">Feed</a></li>
-          <li><a href="#">Discussions</a></li>
-          <li><a href="#">Leaderboards</a></li>
-          <li><a href="#">Events</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="#">Golf Tips</a></li>
-          <li><a href="#">Course Reviews</a></li>
-          <li><a href="#">Equipment Guide</a></li>
-          <li><a href="#">Pro Insights</a></li>
-        </ul>
-      </div>
-  
-      <div class="footer-col">
-        <h4>Stay Updated</h4>
-        <form class="footer-form">
-          <input type="email" placeholder="Your email">
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  
-    <p>&copy; 2025 ModernPar. All rights reserved. &nbsp; | &nbsp;
-       <a href="#">Privacy Policy</a> &nbsp; | &nbsp;
-       <a href="#">Terms of Service</a> &nbsp; | &nbsp;
-       <a href="#">Contact</a>
-    </p>
-  
-    <!-- New small italicized line -->
-    <p class="powered-by">
-      Powered by <a href="https://blackrockoperations.com" target="_blank">Blackrock Operations</a>
-    </p>
-  </footer>
-  
-  
+  footer .powered-by a:hover {
+    text-decoration: underline;
+  }
+/* =========================
+   ICON (generic inline SVG helper)
+   ========================= */
+.icon { width: 32px; height: 32px; margin-bottom: 0.75rem; color: #16a34a; }
 
 
